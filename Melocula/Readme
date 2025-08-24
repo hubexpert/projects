@@ -1,0 +1,9 @@
+A molecule SMILES project uses a special kind of "chemical language" to predict what a molecule will do.
+
+What is SMILES? Imagine a molecule as a complex 3D shape. A SMILES string is like a simplified line of text that represents that shape. It's a way for a computer to "read" and understand a molecule without needing a picture.
+
+
+What the project does: The project uses a large dataset of these SMILES strings to train a machine learning model. The goal is to predict a molecule's properties, such as whether it will bind to a specific protein or have a certain effect on the body.
+
+
+The outcome: By analyzing a molecule's SMILES string, the project can quickly identify promising compounds for things like new medicines or food products, saving a lot of time and resources that would normally be spent on expensive and lengthy lab experiments.
