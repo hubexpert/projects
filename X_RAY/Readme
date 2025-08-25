@@ -61,7 +61,16 @@ Loss decreased steadily over 5 epochs (0.216 → 0.089).
 
 Mean ROC AUC: 0.656 (baseline performance).
 
-If you want to get  better performance ,You should  use more than 10000 image. Remember,to use all image in the model we need powerful gpu . 
+# Suggestions to Improve
 
-you can change parimetters in the model to see how it effect the evaluation.
+Use BCEWithLogitsLoss instead of Sigmoid+BCELoss (numerically more stable).
+
+Try class balancing (dataset is very imbalanced — “No Finding” dominates).
+
+Increase training data (10k → full 112k).
+
+Use longer training (20–30 epochs) + learning rate scheduler.
+
+Use threshold tuning (instead of fixed 0.5) to maximize recall/F1.
+
 
