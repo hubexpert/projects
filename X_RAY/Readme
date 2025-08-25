@@ -7,6 +7,7 @@ The dataset contains 112,120 images from 30,805 patients, with labels for 14 tho
 The goal is to automatically predict diseases from chest X-ray images using a transfer learning approach (DenseNet121).
 
 📊 Dataset
+Images: https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737
 
 Source: NIH ChestX-ray14
 
