@@ -1,0 +1,67 @@
+🩻 ChestX-ray Disease Prediction (CXR8)
+📌 Project Overview
+
+This project uses the NIH ChestX-ray14 (CXR8) dataset, a large-scale medical image dataset of chest X-rays, to build a deep learning model for multi-label disease classification.
+The dataset contains 112,120 images from 30,805 patients, with labels for 14 thoracic diseases.
+
+The goal is to automatically predict diseases from chest X-ray images using a transfer learning approach (DenseNet121).
+
+📊 Dataset
+
+Source: NIH ChestX-ray14
+
+Size: 112,120 frontal chest X-ray images
+
+Labels: 14 possible findings (multi-label)
+
+Metadata: Provided in Data_Entry_2017.csv
+
+In this project, 10,000 valid images were used (filtered to remove missing files).
+
+Disease Classes
+Atelectasis, Cardiomegaly, Consolidation, Edema, Effusion, 
+Emphysema, Fibrosis, Hernia, Infiltration, Mass, 
+No Finding, Nodule, Pleural_Thickening, Pneumonia, Pneumothorax
+
+⚙️ Methodology
+
+Data Preparation
+
+Loaded metadata from CSV
+
+Filtered missing images
+
+Encoded labels with MultiLabelBinarizer
+
+Split into training (8463 samples) and testing (1537 samples)
+
+Model
+
+Pretrained DenseNet121 (ImageNet weights)
+
+Replaced final layer with 14-class sigmoid output
+
+Loss: Binary Cross-Entropy (BCE)
+
+Optimizer: Adam (lr = 1e-4)
+
+Epochs: 5
+
+Training
+
+Input size: 224×224
+
+Batch size: 32
+
+Normalization: ImageNet mean/std
+
+📈 Results
+
+Loss decreased steadily over 5 epochs (0.216 → 0.089).
+
+Mean ROC AUC: 0.656 (baseline performance).
+
+If you want to get  better performance ,You should  use more than 10000 image. Remember,to use all image in the model we need powerful gpu . 
+
+you can change parimetters in the model to see how it effect the evaluation.
+
